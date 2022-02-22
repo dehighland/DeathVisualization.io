@@ -1,2 +1,0 @@
-# DeathVisualization.io
-Death Visualization
