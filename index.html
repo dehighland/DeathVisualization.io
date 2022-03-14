@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://unpkg.com/d3-simple-slider"></script>
-    <script src="index.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
 
@@ -12,14 +11,9 @@
     <svg id="topGraphsContainer"></div>
     <div id="map"></div>
     <div id="map2"></div>
-    <div id="tooltip"></div>
-    <div id="dataToggle">
-      <input type="radio" name="dataset" onclick='fileSet("DeathCause.csv")' value="DeathCause" checked> Cause of Death<br>
-      <input type="radio" name="dataset" onclick='fileSet("Income.csv")' value="Income"> Income<br>
-    </div>
 
     <div id="slider">
-      <input id="year" type="range" min="2005" max="2015" step="1" value="2015" list="ticks" oninput="rangevalue.value=value"/>
+      <input id="year" type="range" min="2005" max="2015" step="1" value="2015" class='slider' list="ticks" oninput="rangevalue.value=value"/>
       <datalist id="ticks">
         <option value="1999" label="1999"></option>
         <option value="2000" label="2000"></option>
@@ -45,7 +39,7 @@
     </div>
 
     <div id="slider2">
-      <input id="year2" type="range" min="2005" max="2015" step="1" value="2015" list="ticks2" oninput="rangevalue2.value=value"/>
+      <input id="year2" type="range" min="2005" max="2015" step="1" value="2015" class='slider' list="ticks2" oninput="rangevalue2.value=value"/>
       <datalist id="ticks2">
         <option value="1999" label="1999"></option>
         <option value="2000" label="2000"></option>
@@ -137,5 +131,7 @@
         <a onclick="DropDownClick2('Income.csv','Hispanic/white')">Hispanic/white</a>
       </div>
     </div>
+
+    <script src="map.js"></script>
   </body>
 </html>
